@@ -1,0 +1,16 @@
+.jumbotron {
+  height: 100px;
+  margin: 0px !important;
+  background-color: black !important;
+  color: white;
+}
+
+.navbar {
+  background-color: #c2f1f3e3;
+  color: black !important;
+}
+
+.site-footer {
+  background-color: black;
+  color: white;
+}

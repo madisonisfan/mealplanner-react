@@ -1,0 +1,19 @@
+.jumbotron {
+  height: 100px;
+  margin: 0px !important;
+  background-color: black !important;
+  color: white;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.site-footer {
+  background-color: black;
+  color: white;
+}
+
+.meal-type-buttons {
+  background-color: aquamarine;
+}
