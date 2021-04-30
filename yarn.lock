@@ -11687,6 +11687,11 @@ typeface-alegreya-sans@^1.1.13:
   resolved "https://registry.npmjs.org/typeface-alegreya-sans/-/typeface-alegreya-sans-1.1.13.tgz"
   integrity sha512-kN8uYR13uohslaZLjRFmMJO1z46GeKBOPgojcXJ+34wCvwxotDSFFI5aWRXMeTU9dv6VsQItRORMkProD2zMwg==
 
+typeface-alegreya-sc@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-alegreya-sc/-/typeface-alegreya-sc-1.1.13.tgz#cd622abf75b95a588f61b0242626d414436158ed"
+  integrity sha512-A6fj2ePpKCU91qrTlRe3FMBGcY4t0PCOGzY7EwoQxLl7m8M8kqKqKWAhklpx4GDx75ViN7Eum/DO+Lqtit7SEA==
+
 unbox-primitive@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.1.tgz"

@@ -95,6 +95,10 @@ class RenderEditButton extends Component {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   }
 
+  handleEdit(values) {
+    alert("edit being submitted");
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -104,7 +108,7 @@ class RenderEditButton extends Component {
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Edit Information</ModalHeader>
           <ModalBody>
-            <LocalForm>
+            <LocalForm onSubmit={(values) => this.handleEdit(values)}>
               <div className="form-group">
                 <Label htmlFor="goal">Goal: </Label>
                 <Control.text
@@ -135,6 +139,7 @@ class RenderEditButton extends Component {
                   value={this.state.sensitivities}
                 />
               </div>
+              <Button type="submit">Submit Changes</Button>
             </LocalForm>
           </ModalBody>
         </Modal>

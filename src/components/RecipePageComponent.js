@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 //import { render } from "react-dom";
 import { LocalForm, Control } from "react-redux-form"; //Errors
 
-function MainRecipePage({ selectedType, mealTypes, recipes }) {
+function MainRecipePage({ selectedType, mealTypes, recipes, postRecipe }) {
   console.log(`selected Type ${selectedType}`);
   return (
     <React.Fragment>
@@ -27,7 +27,7 @@ function MainRecipePage({ selectedType, mealTypes, recipes }) {
         </div>
         <div className="row">
           <div className="col meal-buttons-col">
-            <RenderButtons mealTypes={mealTypes} />
+            <RenderButtons mealTypes={mealTypes} postRecipe={postRecipe} />
           </div>
         </div>
       </div>
@@ -63,6 +63,16 @@ class AddRecipeForm extends Component {
 
   recipeSubmit(values) {
     console.log(`New Recipe: ${JSON.stringify(values)}`);
+    this.props.postRecipe(
+      values.recipeName,
+      values.recipeDescription,
+      values.servings,
+      values.calories,
+      values.cooktime,
+      values.preptime,
+      values.ingredients,
+      values.instructions
+    );
     this.toggleModal();
   }
 
@@ -90,7 +100,7 @@ class AddRecipeForm extends Component {
                 className="form-control"
                 placeholder="Recipe Name"
               />
-              <Label htmlFor="recipeDescription">Recipe Name</Label>
+              <Label htmlFor="recipeDescription">Recipe Description</Label>
               <Control.text
                 model=".recipeDescription"
                 id="recipeDescription"
@@ -156,7 +166,7 @@ class AddRecipeForm extends Component {
     );
   }
 }
-function RenderButtons({ mealTypes }) {
+function RenderButtons({ mealTypes, postRecipe }) {
   return (
     <React.Fragment>
       {mealTypes.map((type) => (
@@ -166,7 +176,7 @@ function RenderButtons({ mealTypes }) {
           </Link>
         </Button>
       ))}
-      <AddRecipeForm />
+      <AddRecipeForm postRecipe={postRecipe} />
     </React.Fragment>
   );
 }

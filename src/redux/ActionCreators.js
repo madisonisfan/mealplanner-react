@@ -61,6 +61,40 @@ export const addRecipes = (recipes) => ({
   payload: recipes,
 });
 
+export const postRecipe = (
+  name,
+  description,
+  servings,
+  calories,
+  cooktime,
+  preptime,
+  ingredients,
+  instructions
+) => (dispatch) => {
+  alert("post recipe");
+
+  const newRecipe = {
+    name,
+    description,
+    servings,
+    calories,
+    cooktime,
+    preptime,
+    ingredients,
+    instructions,
+  };
+
+  newRecipe.date = new Date().toISOString();
+  newRecipe.image = "/assets/images/food2.jpg";
+
+  dispatch(addRecipe(newRecipe));
+};
+
+export const addRecipe = (recipe) => ({
+  type: ActionTypes.ADD_RECIPE,
+  payload: recipe,
+});
+
 export const fetchUserInfo = () => (dispatch) => {
   dispatch(addUserInfo(USERINFO));
 };

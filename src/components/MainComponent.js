@@ -10,6 +10,7 @@ import {
   fetchMealtypes,
   fetchRecipes,
   fetchUserInfo,
+  postRecipe,
 } from "../redux/ActionCreators";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
@@ -31,6 +32,26 @@ const mapDispatchToProps = {
   addPost: (postType, postContent) => postNewPost(postType, postContent),
   fetchMealtypes: () => fetchMealtypes(),
   fetchRecipes: () => fetchRecipes(),
+  postRecipe: (
+    name,
+    description,
+    servings,
+    calories,
+    cooktime,
+    preptime,
+    ingredients,
+    instructions
+  ) =>
+    postRecipe(
+      name,
+      description,
+      servings,
+      calories,
+      cooktime,
+      preptime,
+      ingredients,
+      instructions
+    ),
   fetchUserInfo: () => fetchUserInfo(),
 };
 
@@ -55,6 +76,7 @@ class Main extends Component {
             selectedType="All Recipes"
             mealTypes={this.props.mealtypes.mealtypes}
             recipes={this.props.recipes.recipes}
+            postRecipe={this.props.postRecipe}
           />
         );
       } else {
@@ -65,6 +87,7 @@ class Main extends Component {
             recipes={this.props.recipes.recipes.filter(
               (recipe) => recipe.mealType === match.params.mealType
             )}
+            postRecipe={this.props.postRecipe}
           />
         );
       }

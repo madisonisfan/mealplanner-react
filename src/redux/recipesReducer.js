@@ -12,6 +12,9 @@ export const Recipes = (
         errMess: null,
         recipes: action.payload,
       };
+    case ActionTypes.ADD_RECIPE:
+      const recipe = action.payload;
+      return { ...state, recipes: state.recipes.concat(recipe) };
     default:
       return state;
   }

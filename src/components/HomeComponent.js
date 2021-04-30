@@ -13,38 +13,16 @@ import {
 import { Control, LocalForm } from "react-redux-form"; // Errors
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isModalOpen: false,
-      firstName: " ",
-      lastName: " ",
-      email: " ",
-      password: " ",
-    };
-    this.toggleModal = this.toggleModal.bind(this);
-    this.handleSignUp = this.handleSignUp.bind(this);
-  }
-
-  toggleModal() {
-    this.setState({ isModalOpen: !this.state.isModalOpen });
-  }
-
-  handleSignUp(values) {
-    //alert(`Sign up: ${JSON.stringify(values)}`);
-    alert("Sign up:" + JSON.stringify(values));
-    this.toggleModal();
-  }
-
   render() {
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <Card>
+        <div className="container-fluid main-page-container">
+          {/*mt-4 mt-md-6 pt-md-4 mr-2 ml-2 */}
+          <div className="row main-page-row">
+            <div class="col-12 col-xl-4">
+              <Card className="main-page-card mr-xl-2 ">
                 <CardBody>
-                  <CardHeader>
+                  <CardHeader className="card-header-main">
                     <h3>Preferences & Sensitivities</h3>
                   </CardHeader>
                   <p>
@@ -55,10 +33,10 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col">
-              <Card>
+            <div class="col-12 col-xl-4">
+              <Card className="main-page-card mr-xl-2 ml-xl-2">
                 <CardBody>
-                  <CardHeader>
+                  <CardHeader className="card-header-main">
                     <h3>Add Recipes</h3>
                   </CardHeader>
                   <p>
@@ -70,10 +48,10 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col">
-              <Card>
+            <div class="col-12 col-xl-4">
+              <Card className="main-page-card ml-xl-2">
                 <CardBody>
-                  <CardHeader>
+                  <CardHeader className="card-header-main">
                     <h3>Customizable Mealplan</h3>
                   </CardHeader>
                   <p>
@@ -87,18 +65,18 @@ class Home extends Component {
           </div>
           {/*row*/}
 
-          <div className="row">
-            <div className="col-12 text-center">
+          <div className="row ">
+            <div className="col-12 text-center ">
               <h2>Build A Community</h2>
-              <p>With our program you are never alone</p>
+              <p className="m-0">With our program you are never alone</p>
             </div>
           </div>
 
-          <div className="row">
-            <div className="col">
-              <Card>
+          <div className="row main-page-row">
+            <div className="col-12 col-xl-4">
+              <Card className="main-page-card mr-xl-2 ">
                 <CardBody>
-                  <CardHeader>
+                  <CardHeader className="card-header-main">
                     <h3>Post</h3>
                   </CardHeader>
                   <p>
@@ -109,10 +87,10 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col">
-              <Card>
+            <div className="col-12 col-xl-4">
+              <Card className="main-page-card mr-xl-2 ml-xl-2">
                 <CardBody>
-                  <CardHeader>
+                  <CardHeader className="card-header-main">
                     <h3>Message</h3>
                   </CardHeader>
                   <p>
@@ -122,10 +100,10 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col">
-              <Card>
+            <div className="col-12 col-xl-4">
+              <Card className="main-page-card ml-xl-2">
                 <CardBody>
-                  <CardHeader>
+                  <CardHeader className="card-header-main">
                     <h3>Follow</h3>
                   </CardHeader>
                   <p>
@@ -137,11 +115,46 @@ class Home extends Component {
               </Card>
             </div>
           </div>
+          <RenderGetStarted />
+        </div>
+        {/*container */}
+      </React.Fragment>
+    );
+  }
+}
 
-          <div className="row">
-            <div className="col">
-              <Button onClick={this.toggleModal}>Get Started</Button>
-            </div>
+class RenderGetStarted extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalOpen: false,
+      firstName: " ",
+      lastName: " ",
+      email: " ",
+      password: " ",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal() {
+    this.setState({ isModalOpen: !this.state.isModalOpen });
+  }
+
+  handleSubmit(values) {
+    console.log("Current State is: " + JSON.stringify(values));
+    alert("Current State is: " + JSON.stringify(values));
+    this.toggleModal();
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="row">
+          <div className="col d-flex justify-content-center">
+            <Button className="get-started-button" onClick={this.toggleModal}>
+              Get Started
+            </Button>
           </div>
         </div>
 
