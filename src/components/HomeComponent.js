@@ -2,18 +2,15 @@ import React, { Component } from "react";
 import {
   Card,
   CardHeader,
-  CardImg,
-  CardText,
   CardBody,
-  CardTitle,
   Button,
   Modal,
   ModalBody,
   ModalHeader,
   Label,
-} from "reactstrap";
+} from "reactstrap"; //CardTitle,  CardImg,CardText,
 
-import { Control, LocalForm, Errors } from "react-redux-form";
+import { Control, LocalForm } from "react-redux-form"; // Errors
 
 class Home extends Component {
   constructor(props) {

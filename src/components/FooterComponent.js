@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer className="site-footer">
       <div className="container-fluid">
@@ -22,10 +22,10 @@ function Footer(props) {
             <h5>Contact Us</h5>
             <ul class="list-unstyled">
               <li>
-                <a>email@gmail.com</a>
+                <a href="/#">email@gmail.com</a>
               </li>
               <li>
-                <a>310-xxx-xxx</a>
+                <a href="/#">310-xxx-xxx</a>
               </li>
             </ul>
           </div>

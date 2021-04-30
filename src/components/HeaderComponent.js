@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import {
   Jumbotron,
   Navbar,
-  NavbarBrand,
   NavItem,
   NavbarToggler,
   Collapse,
   Nav,
-} from "reactstrap";
+} from "reactstrap"; //NavbarBrand,
 import { NavLink } from "react-router-dom";
 
 function MainHeader(props) {
@@ -33,6 +32,7 @@ class MainNav extends Component {
     this.state = {
       isNavOpen: false,
     };
+    this.toggleNav = this.toggleNav.bind(this);
   }
   toggleNav() {
     this.setState({ isNavOpen: !this.state.isNavOpen });
@@ -40,7 +40,7 @@ class MainNav extends Component {
 
   render() {
     return (
-      <Navbar dark sticky="top" expand="md">
+      <Navbar light sticky="top" expand="md">
         <div className="container-fluid">
           <NavbarToggler onClick={this.toggleNav}></NavbarToggler>
           <Collapse isOpen={this.state.isNavOpen} navbar>

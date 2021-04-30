@@ -1,0 +1,127 @@
+.jumbotron {
+  height: 100px;
+  margin: 0px !important;
+  background-color: black !important;
+  color: white;
+}
+
+body {
+  font-family: "Alegreya Sans";
+}
+
+.navbar {
+  background-color: black;
+}
+
+.link {
+  color: black;
+}
+
+.site-footer {
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.meal-type-button {
+  background-color: rgb(215, 242, 250);
+  margin: 5px;
+}
+
+.navbar {
+  background-color: rgb(215, 242, 250);
+}
+
+.nav-link {
+  color: black;
+}
+
+.recipeHeader {
+  font-family: "Alegreya Sans";
+  text-align: center;
+  margin-top: 20px;
+}
+.meal-buttons-col {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-recipe-butt {
+  margin-left: 5px;
+  background-color: white;
+  color: black;
+}
+
+.recipe-img {
+  height: 150px;
+  width: auto;
+  object-fit: cover;
+}
+
+.recipe-card {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.recipe-container-sm {
+  width: 90%;
+}
+.recipe-img-sm {
+  height: auto;
+  max-width: 200px;
+  margin-right: 15px;
+}
+
+.recipe-box-sm {
+  border: 1px rgb(196, 190, 190) solid;
+  padding-left: 0px;
+  margin-top: 15px;
+}
+
+.recipe-sm-body {
+  padding-top: 15px;
+  color: black;
+}
+
+.recipe-container-big {
+}
+
+.favorite-butt {
+  color: black;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-bottom: 5px;
+  margin-right: 8px;
+}
+
+.blog-container {
+  max-width: 750px;
+}
+
+.post-row {
+  border: 1px rgb(196, 190, 190) solid;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.create-post-butt {
+  margin-bottom: 15px;
+}
+
+#post-header-line {
+  /*border: solid black 1px;*/
+  border-bottom: solid grey 1px; /*maybe $grey-border ?? */
+  margin-bottom: 10px;
+}
+
+.post-row h4 {
+  margin: 0;
+}
+
+.post-date {
+  color: dark grey;
+  font-size: 13;
+}

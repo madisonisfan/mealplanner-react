@@ -1,7 +1,24 @@
-import { createStore } from "redux";
-import { Reducer, initialState } from "./reducer";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createForms } from "react-redux-form";
+import thunk from "redux-thunk";
+import logger from "redux-logger";
+import { Recipes } from "./recipesReducer";
+import { Posts } from "./postsReducer";
+import { Mealtypes } from "./mealtypesReducer";
+import { UserInfo } from "./userinfoReducer";
+import { InitialPostForm } from "./forms";
+
+const rootReducer = combineReducers({
+  recipes: Recipes,
+  posts: Posts,
+  mealtypes: Mealtypes,
+  userInfo: UserInfo,
+  ...createForms({
+    postForm: InitialPostForm,
+  }),
+});
 
 export const ConfigureStore = () => {
-  const store = createStore(Reducer, initialState);
+  const store = createStore(rootReducer, applyMiddleware(thunk, logger));
   return store;
 };

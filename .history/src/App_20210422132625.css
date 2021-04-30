@@ -1,0 +1,32 @@
+.jumbotron {
+  height: 100px;
+  margin: 0px !important;
+  background-color: black !important;
+  color: white;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.site-footer {
+  background-color: black;
+  color: white;
+}
+
+.meal-type-button {
+  background-color: rgb(215, 242, 250);
+  margin: 5px;
+}
+
+.navbar {
+  background-color: rgb(215, 242, 250);
+}
+
+.nav-link {
+  color: black;
+}
+
+.recipeHeader {
+  font-family: "Alegreya Sans";
+}

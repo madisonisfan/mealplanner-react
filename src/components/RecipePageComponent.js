@@ -7,27 +7,32 @@ import {
   ModalBody,
   ModalHeader,
   Label,
-} from "reactstrap";
+  Col,
+  Media,
+} from "reactstrap"; // Row, Body,
+//import { Media, MediaBody } from "react-media";
 import { Link } from "react-router-dom";
-import { render } from "react-dom";
-import { LocalForm, Control, Errors } from "react-redux-form";
+//import { render } from "react-dom";
+import { LocalForm, Control } from "react-redux-form"; //Errors
 
 function MainRecipePage({ selectedType, mealTypes, recipes }) {
   console.log(`selected Type ${selectedType}`);
   return (
     <React.Fragment>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col">
-            <h2>Recipe: {selectedType}</h2>
+            <h2 className="recipeHeader">Recipe: {selectedType}</h2>
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col meal-buttons-col">
             <RenderButtons mealTypes={mealTypes} />
           </div>
         </div>
-        <div className="row">
+      </div>
+      <div className="container-fluid">
+        <div className="row recipe-card-row">
           <RenderRecipeCard recipes={recipes} />
         </div>
       </div>
@@ -64,7 +69,11 @@ class AddRecipeForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <Button onClick={this.toggleModal}>Add Recipe</Button>
+        <Button className="add-recipe-butt" onClick={this.toggleModal}>
+          <i className="fa fa-plus" />
+          {"  "}
+          Add Recipe
+        </Button>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Add Recipe</ModalHeader>
           <ModalBody>
@@ -151,8 +160,8 @@ function RenderButtons({ mealTypes }) {
   return (
     <React.Fragment>
       {mealTypes.map((type) => (
-        <Button className="meal-type-buttons">
-          <Link key={type.id} to={`/recipes/${type.mealType}`}>
+        <Button className="meal-type-button" key={type.id}>
+          <Link style={{ color: "black" }} to={`/recipes/${type.mealType}`}>
             {type.title}
           </Link>
         </Button>
@@ -169,14 +178,51 @@ function RenderRecipeCard({ recipes }) {
       <React.Fragment>
         {recipes.map((recipe) => {
           return (
-            <div key={recipe.id} className="col">
-              <Card>
-                <CardBody>
-                  <h5>{recipe.name}</h5>
-                  <p>{recipe.description}</p>
-                </CardBody>
-              </Card>
-            </div>
+            <React.Fragment key={recipe.id}>
+              <div className="col-4 col-lg-3 d-none d-md-block">
+                <Card className="recipe-card mx-auto">
+                  <img class="card-img-top recipe-img" src={recipe.image} />
+                  <CardBody>
+                    <Link style={{ color: "black" }}>
+                      <h5>{recipe.name}</h5>
+                    </Link>
+                    <p>{recipe.description}</p>
+                    <Link className="favorite-butt" style={{ color: "black" }}>
+                      <i className="fa fa-star" />
+                      Favorite
+                    </Link>
+                  </CardBody>
+                </Card>
+              </div>
+
+              <div className="recipe-container-sm  mx-auto d-block d-md-none">
+                <Col xs={12} className="recipe-box-sm">
+                  <Media>
+                    <Media left>
+                      <img
+                        className="d-flex recipe-img-sm"
+                        src={recipe.image}
+                      />
+                    </Media>
+
+                    <Media body className="recipe-sm-body">
+                      <Link style={{ color: "black" }}>
+                        <h5>{recipe.name}</h5>
+                      </Link>
+                      <p>{recipe.description}</p>
+                      <Link
+                        className="favorite-butt"
+                        style={{ color: "black" }}
+                      >
+                        {" "}
+                        <i className="fa fa-star" />
+                        Favorite
+                      </Link>
+                    </Media>
+                  </Media>
+                </Col>
+              </div>
+            </React.Fragment>
           );
         })}
       </React.Fragment>
