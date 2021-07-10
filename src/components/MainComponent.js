@@ -4,6 +4,9 @@ import MainHeader from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import MainBlogPage from "./BlogComponent";
 import YourPage from "./YourPageComponent";
+import MainRecipePage from "./RecipePageComponent";
+import MainMealplanPage from "./MealPlanComponent";
+import Favorites from "./FavoritesComponent";
 import {
   fetchPosts,
   postNewPost,
@@ -11,10 +14,11 @@ import {
   fetchRecipes,
   fetchUserInfo,
   postRecipe,
+  fetchUserMealplan,
 } from "../redux/ActionCreators";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import MainRecipePage from "./RecipePageComponent";
+
 import { actions } from "react-redux-form";
 
 const mapStateToProps = (state) => {
@@ -23,6 +27,7 @@ const mapStateToProps = (state) => {
     mealtypes: state.mealtypes,
     posts: state.posts,
     userInfo: state.userInfo,
+    userMealplan: state.userMealplan,
   };
 };
 
@@ -35,6 +40,7 @@ const mapDispatchToProps = {
   postRecipe: (
     name,
     description,
+    recipeType,
     servings,
     calories,
     cooktime,
@@ -45,6 +51,7 @@ const mapDispatchToProps = {
     postRecipe(
       name,
       description,
+      recipeType,
       servings,
       calories,
       cooktime,
@@ -53,6 +60,7 @@ const mapDispatchToProps = {
       instructions
     ),
   fetchUserInfo: () => fetchUserInfo(),
+  fetchUserMealplan: () => fetchUserMealplan(),
 };
 
 class Main extends Component {
@@ -61,6 +69,7 @@ class Main extends Component {
     this.props.fetchMealtypes();
     this.props.fetchRecipes();
     this.props.fetchUserInfo();
+    this.props.fetchUserMealplan();
   }
 
   render() {
@@ -115,6 +124,13 @@ class Main extends Component {
             path="/yourpage"
             render={() => <YourPage userInfo={this.props.userInfo.userInfo} />}
           />
+          <Route
+            path="/mealplan"
+            render={() => (
+              <MainMealplanPage userMealplan={this.props.userMealplan} />
+            )}
+          />
+          <Route path="/favorites" component={Favorites} />
           <Redirect to="/home" />
         </Switch>
         <Footer />

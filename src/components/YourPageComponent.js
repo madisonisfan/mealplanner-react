@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PageTitleComponent from "./PageTitleComponent";
 import {
   Row,
   Col,
@@ -17,12 +18,8 @@ function MainYourPage({ userInfo }) {
   console.log(`goal: ${userInfo.goal}`);
   return (
     <React.Fragment>
+      <PageTitleComponent title="Your Page" />
       <div className="container-fluid">
-        <Row>
-          <Col xs={12}>
-            <h2 className="text-center">Your Page</h2>
-          </Col>
-        </Row>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Button>Favorites</Button>
@@ -49,7 +46,7 @@ class RenderUserInfoTable extends Component {
         <Row>
           <Col xs={12}>
             <Card>
-              <CardHeader>
+              <CardHeader className="text-center">
                 <h3>Your Information</h3>
               </CardHeader>
               <CardBody>

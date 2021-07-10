@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import PageTitleComponent from "./PageTitleComponent";
 import { Row, Col, Button, Modal, ModalHeader } from "reactstrap";
-import { LocalForm, Control,} from "react-redux-form";// Errors 
+import { LocalForm, Control } from "react-redux-form"; // Errors
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
 
@@ -40,7 +41,7 @@ function MainBlogPage({
 
   return (
     <React.Fragment>
-      <h2 className="text-center">Blog</h2>
+      <PageTitleComponent title="Blog" />
       <div className="container-fluid text-center mx-auto">
         <Row>
           <Col xs={12}>

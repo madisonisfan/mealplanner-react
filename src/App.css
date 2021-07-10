@@ -5,9 +5,27 @@
   color: white;
 }
 
+.title-container {
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.title {
+  font-family: "Alegreya Sans";
+}
+
 body {
   font-family: "Alegreya SC";
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.btn {
+  font-size: 18px;
+  background-color: white;
+  color: black;
 }
 
 .navbar {
@@ -38,11 +56,23 @@ body {
   color: black;
 }
 
-.recipeHeader {
-  font-family: "Alegreya Sans";
-  text-align: center;
-  margin-top: 20px;
+/*RECIPE PAGE*/
+
+.add-recipe-modal {
+  width: 800px;
 }
+
+.modal-header {
+}
+
+/*.add-recipe-modal .modal-title {
+  text-align: center;
+}
+
+.modal-header {
+  text-align: center;
+}*/
+
 .meal-buttons-col {
   text-align: center;
   margin-bottom: 20px;
@@ -167,6 +197,10 @@ body {
   min-width: 200px;
 }
 
+.main-page-container p {
+  font-size: 20px;
+}
+
 .card-header-main {
   /*
   background-color: white;
@@ -181,4 +215,45 @@ body {
   color: black;
   font-size: 20px;
   font-weight: bold;
+}
+
+/*MEALPLAN */
+.mealplan-container {
+  max-width: 95%;
+  margin-top: 30px;
+}
+
+.mealplan-day-row {
+  margin-bottom: 50px;
+}
+
+.tab {
+  width: 20%;
+  background-color: rgb(199, 232, 253);
+  border: 1px rgb(196, 190, 190) solid;
+  border-radius: 5px;
+}
+
+.tab-content {
+  border: 1px rgb(196, 190, 190) solid;
+  border-radius: 5px;
+  border-top: none;
+}
+
+.mealplan-recipe-img {
+  height: auto;
+  max-width: 200px;
+  margin: 2px;
+  margin-right: 8px;
+}
+
+.edit-mealplan-recipe-butt {
+  border: none;
+  float: right;
+
+  font-weight: bold;
+}
+
+.media-body {
+  padding: 5px;
 }
