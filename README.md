@@ -8,7 +8,9 @@ As part of the React Native course, I created an app to go along with this site.
 - [My Inspiration](#my-inspiration)
 - [Features](#features)
 - [Project Confusion](#project-confusion)
+- [Technologies](#technologies)
 - [Available Scripts](#available-scripts)
+
 
 
 
@@ -32,6 +34,14 @@ Why are there so many repositories?:
 - [View Meal Planner app edited to be integrated with Meal Planner server](https://github.com/madisonisfan/meaplanner-react-integration)
 - [View Meal Planner server edited to be integrated with Meal Planner web app](https://github.com/madisonisfan/meaplanner-server-integration)
 
+## Technologies
+This app is missing some features and needs to be updated.
+- React
+- React Router
+- Redux + Redux Thunk + Redux Logger
+- Reactstrap
+- React Popper
+- Font Awesome
 
 
 <!--
