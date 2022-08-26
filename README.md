@@ -2,47 +2,44 @@
 
 In 2020 I participated in Nucamp's Full-Stack bootcamp. In the second course, we created dynamic web applications with React. This was my submission for the final project. 
 
-In the final course, I created a second version of this web application to be integrated with the backend server. [View resposityory of the integrated react app]
-As part of the React Native course, I created an app to go along with this site. [View app respository here](https://github.com/madisonisfan/mealplanner-RN)
+As part of the React Native course, I created an app to go along with this site. [View app repository here](https://github.com/madisonisfan/mealplanner-RN)
 
-## Explanation of project repository: Why are there so many Meal Planner repositories? 
-- The bootcamp was seperated into 4 courses. The 2nd was React, and the last was Backend. 
-- In the React course, I created this Meal Planner React app not integrated with a server. 
+# Table Of Contents
+- [My Inspiration](#my-inspiration)
+- [Features](#features)
+- [Project Confusion](#project-confusion)
+- [Available Scripts](#available-scripts)
+
+## Project Confusion
+Why are there so many repositories?: 
+- The bootcamp was separated into 4 courses. The 2nd was React, and the last was Backend. 
+- In the React course, I created this Meal Planner React app and it is not integrated with a server. 
 - In the backend course, I created a Meal Planner server not integrated with a React app
-- As extra, we were taught to integrate a React app with a server. But to do so, we created seperate projects which were copies of our react app and server, but with a few new addition.
-## Links to Repositories
+- As an extra, we were taught to integrate a React app with a server. But to do so, we created separate projects which were copies of our react app and server, but with a few new additions.
+## Links to Similar Repositories
 - [View Meal Planner server not integrated with this web app](https://github.com/madisonisfan/meaplanner-node-express-mongodb)
 - [View Meal Planner app edited to be integrated with Meal Planner server](https://github.com/madisonisfan/meaplanner-react-integration)
 - [View Meal Planner server edited to be integrated with Meal Planner web app](https://github.com/madisonisfan/meaplanner-server-integration)
 
 
-## Where my idea came from
-For almost my entire life I've had a passion for health and fitness. Like most people, I found it really diffucult to find healthy food I enjoy, and to stay consistent with healthy eating. My goal is to create a place for people to go where they can oragnize thier weekly meal plans, and be motivated by the community integreated with the site. To help with finding food options for everyone, I created a feature that would allow anyone to add a recipe to the site. With everyone adding recipes, there would be an extesnive list of food.  
+## My Inspiration
+For almost my entire life I've had a passion for health and fitness. Like most people, I found it difficult to find healthy foods that I enjoy and to stay consistent with healthy eating. My goal is to create a place for people to go where they can organize their weekly meal plans, and be motivated by the community integrated with the site. To help with finding food options for everyone, I created a feature that allows anyone to add a recipe to the site. With everyone adding recipes, there would be an extensive list of food.  
 
 
 
 ## Features
 - Recipe Page: Here, users can view all recipes and sort the recipes by meal type (ex: Breakfast). From here, users can also choose to add a recipe to the site, and favorite recipes from the lists. 
-- Mealplan Page: This page is wear users can view and edit their mealplan for the week. 
-- Blog: To create a community, I added a blog feature that allows users to interrate with each other. People can create their own posts and view and comment on each others posts. 
-- Profile Page: Here users can view and edit their details, such as recipes and posts they've added to the site. 
-
-## Technologies
-This project has missing features and needs to be updated. 
-
-- React
-- Redux
-- React Router
-- Reactstrap
-- Redux Thunk 
-- Redux Logger
+- Mealplan Page: This page is where users can view and edit their meal plan for the week. 
+- Blog: To create a community, I added a blog feature that allows users to interact with each other. People can create posts and view and comment on each other's posts. 
+- Profile Page: Here users can view and edit their details, such as recipes 
 
 
+<!--
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+-->
 ## Available Scripts
 
 In the project directory, you can run:
@@ -70,6 +67,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+<!--
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -109,3 +107,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-->
