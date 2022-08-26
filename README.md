@@ -1,4 +1,4 @@
-# Mealplanner - React app without Server Integrated
+# Mealplanner - React app without server integrated
 
 In 2020 I participated in Nucamp's Full-Stack bootcamp. In the second course, we created dynamic web applications with React. This was my submission for the final project. 
 
