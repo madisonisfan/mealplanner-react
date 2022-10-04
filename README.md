@@ -10,6 +10,7 @@ As part of the React Native course, I created an app to go along with this site.
 - [Technologies](#technologies)
 - [Installation and Usage](#installation-and-usage)
 - [Project Confusion](#project-confusion)
+- [Images](#images)
 
 
 
@@ -22,7 +23,6 @@ For almost my entire life I've had a passion for health and fitness. Like most p
 - Mealplan Page: This page is where users can view and edit their meal plan for the week. 
 - Blog: To create a community, I added a blog feature that allows users to interact with each other. People can create posts and view and comment on each other's posts. 
 - Profile Page: Here users can view and edit their details, such as recipes 
-
 
 
 ## Technologies
@@ -52,6 +52,14 @@ Why are there so many repositories?:
 - [View Meal Planner server not integrated with this web app](https://github.com/madisonisfan/meaplanner-node-express-mongodb)
 - [View Meal Planner app edited to be integrated with Meal Planner server](https://github.com/madisonisfan/meaplanner-react-integration)
 - [View Meal Planner server edited to be integrated with Meal Planner web app](https://github.com/madisonisfan/meaplanner-server-integration)
+
+## Images
+
+
+<img width="1419" alt="Screen Shot 2022-10-03 at 7 55 15 PM" src="https://user-images.githubusercontent.com/69568402/193725060-ca5492c5-7957-4ebf-aa7d-5633851bfb7e.png">
+<img width="1421" alt="Screen Shot 2022-10-03 at 7 56 29 PM" src="https://user-images.githubusercontent.com/69568402/193725070-94edfdca-ca31-4901-b475-0f27a75133c1.png">
+<img width="1420" alt="Screen Shot 2022-10-03 at 7 56 52 PM" src="https://user-images.githubusercontent.com/69568402/193725074-89039e1c-367f-4ebb-8c8b-36f1787e6646.png">
+<img width="1421" alt="Screen Shot 2022-10-03 at 7 57 36 PM" src="https://user-images.githubusercontent.com/69568402/193725250-436558a9-d377-4b0d-87b1-2c18466bb014.png">
 
 
 <!--
